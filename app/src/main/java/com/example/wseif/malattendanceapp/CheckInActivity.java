@@ -39,7 +39,7 @@ public class CheckInActivity extends FragmentActivity implements OnMapReadyCallb
             LatLng userLocation = new LatLng(deviceLat, deviceLng);
 
             mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location").snippet("Latitude : "+userLocation.latitude+" , Longitude : " + userLocation.longitude));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,8));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,16));
             //mMap.animateCamera(CameraUpdateFactory.zoomBy(2));
             Toast.makeText(getApplicationContext(), "You aren't in correct area. Please go to The Greek Campus - Cairo Downtown.", Toast.LENGTH_LONG).show();
         } else {
